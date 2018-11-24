@@ -1,0 +1,61 @@
+
+<link rel="stylesheet" href="resources/css/navbar.css">
+<div class="container">
+<br>
+<div class="row mt-100">
+	<div class="col-md-8 col-md-offset-2">
+		<h3 class="section-title">
+			Manufacturer
+		</h3>
+		<div class="panel material-panel panel-default shadow-big" >
+
+			<div class="panel-body">
+				<form type="form" name="regform" role="form" ng-submit="add_data()" novalidate>
+					<div class="form-group col-md-12">
+						<div class="panel-section active">
+							<label for="name">Manufacturer Name</label>
+							<input type="text" class="form-control material-input" id="name" placeholder="Name" ng-model="manufacturer_name" required>
+							<span class="text-danger" ng-if="manufacturer_err">{{manufacturer_err_msg}}</span>
+						
+						</div>
+					</div>
+					
+					<div class="form-group col-md-12 text-center my-account-form-link-container" style="padding-bottom: 20px;">
+						<input type="submit" class="my-account-form-link" style="padding-left:40px;padding-right:40px;border-radius: 4px;" value="Add">
+					</div>
+				</form>
+			</div>
+		</div>
+
+				 <div class="panel material-panel panel-default shadow-big" style="padding:25px;" ng-if="manufacturerdisplay">
+            <div class="panel-body">
+               <div class="table-responsive">
+                  
+                     <table id="example_wrapper" class="table table-striped table-bordered display dataTables_wrapper" >
+                        <tr>
+                        <thead>
+                           <th>Manufacturer Name</th>
+                           <th>Status</th>
+                           
+                        </thead>
+                        </tr>
+                        <tbody>
+                           <tr ng-repeat="resdata in manufacturedata" >
+                              <td>{{resdata.manufacturer_name}}</td>
+                              <td><span ng-if="resdata.status==1">Active</span><span ng-if="resdata.status==0">InActive</span></td>
+                            
+                           </tr>
+                        </tbody>
+                     </table>
+                  
+               </div>
+            </div>
+           
+         </div>
+		
+		
+	
+
+	</div>
+</div>
+</div>

@@ -1,0 +1,49 @@
+
+<link rel="stylesheet" href="resources/css/navbar.css">
+<div class="container">
+
+   <br>
+   <div class="row mt-100">
+      <div class="col-md-8 col-md-offset-2">
+         <h3 class="section-title">
+            
+           Cart Details
+         </h3>
+         <div class="panel material-panel panel-default shadow-big" style="padding:25px;">
+            <div class="panel-body">
+               <div class="table-responsive">
+                 <table id="example_wrapper" class="table table-striped table-bordered display dataTables_wrapper" >
+                        <tr>
+                        <thead>
+                           <th>Product Name</th>
+                           <th>Category Name</th>
+                           <th>Product Description</th>
+                           <th>Product Price</th>
+                           <th>Prodocut Image</th>
+                           <th>Action</th>
+                          
+                        </thead>
+                        </tr>
+                         <tbody>
+                           <tr ng-repeat="resdata in products" >
+                              <td><input type="hidden" ng-model="cartdata.cart_id" ng-value="resdata.cart_id" />{{resdata.product_name}}</td>
+                              <td>{{resdata.category_name}}</td>
+                              <td>{{resdata.description}}</td>
+                              <td>{{resdata.price}}</td>
+                              <td><img class="img-responsive" ng-if="resdata.image!=''" src="{{image_url+resdata.image}}"></td>
+                              <td><a ng-click="add_product(resdata.product_id,resdata.category_id)">Add Product</a> / <a ng-click="remove_product(resdata.cart_id)">Remove Product</a></td>
+                              
+                            
+                           </tr>
+                        </tbody>
+                       
+                     </table>
+               </div>
+            
+               <span><a ng-if="products.length > 0" ng-click="order_completed(cartdata)">Checkout</a></span>
+            </div>
+           
+         </div>
+      </div>
+   </div>
+</div>

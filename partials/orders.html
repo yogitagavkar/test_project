@@ -1,0 +1,50 @@
+
+<link rel="stylesheet" href="resources/css/navbar.css">
+<div class="container">
+
+   <br>
+   <div class="row mt-100">
+      <div class="col-md-8 col-md-offset-2">
+         <h3 class="section-title">
+            
+           List Of Orders
+         </h3>
+         <div class="panel material-panel panel-default shadow-big" style="padding:25px;">
+            <div class="panel-body">
+               <div class="table-responsive">
+                  <form>
+                     <table id="example_wrapper" class="table table-striped table-bordered display dataTables_wrapper" >
+                        <tr>
+                        <thead>
+                           <th>User Name</th>
+                           <th>Category Name</th>
+                           <th>Mobile</th>
+                           <th>Address</th>
+                           <th>Product Name</th>
+                           <th>Product Price</th>
+                           <th>Order Type</th>
+                           <th>Order Status</th>
+                        </thead>
+                        </tr>
+                        <tbody>
+                           <tr ng-repeat="resdata in orders" >
+                              <td>{{resdata.name}}</td>
+                              <td>{{resdata.category_name}}</td>
+                              <td>{{resdata.mobile}}</td>
+                              <td>{{resdata.address}}</td>
+                              <td>{{resdata.product_name}}</td>
+                              <td>{{resdata.price}}</td>
+                              <td>{{resdata.order_type}}</td>
+                              <td>{{resdata.order_status}}</td>
+                            
+                           </tr>
+                        </tbody>
+                     </table>
+                  </form>
+               </div>
+            </div>
+           
+         </div>
+      </div>
+   </div>
+</div>

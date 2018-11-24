@@ -1,0 +1,35 @@
+
+<link rel="stylesheet" href="resources/css/navbar.css">
+<div class="container">
+<br>
+<div class="row mt-100">
+	<div class="col-md-8 col-md-offset-2">
+		<h3 class="section-title">
+			
+			Add Catgeories
+		</h3>
+		<div class="panel material-panel panel-default shadow-big">
+
+			<div class="panel-body">
+				<form type="form" name="regform" role="form" ng-submit="addcategory()" novalidate>
+					<div class="form-group col-md-12">
+						<div class="panel-section active">
+							<label for="name">Category Name</label>
+							<input type="text" class="form-control material-input" id="name" placeholder="Name" ng-model="category_name" required>
+							<span class="text-danger" ng-if="category_err">{{category_err_msg}}</span>
+						
+						</div>
+					</div>
+					
+					<div class="form-group col-md-12 text-center my-account-form-link-container" style="padding-bottom: 20px;">
+						<input type="submit" class="my-account-form-link" style="padding-left:40px;padding-right:40px;border-radius: 4px;" value="Add Category">
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	
+
+	</div>
+</div>
+</div>

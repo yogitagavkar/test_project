@@ -1,0 +1,12 @@
+import('../../angularjs/controllers/welcome.js');
+import('../../angularjs/controllers/Mobile.js');
+import('../../angularjs/controllers/BasicInfo.js');
+import('../../angularjs/controllers/Myaccount.js');
+import('../../angularjs/controllers/Register.js');
+import('../../angularjs/controllers/Login.js');
+import('../../angularjs/controllers/Form_five_controller.js');
+import('../../angularjs/controllers/Form_four_controller.js');
+import('../../angularjs/controllers/Form_three_controller.js');
+import('../../angularjs/controllers/Form_two_controller.js');
+import('../../angularjs/controllers/Form_one_controller.js');
+import('../../angularjs/controllers/Frontend.js');

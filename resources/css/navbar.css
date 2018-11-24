@@ -1,0 +1,22 @@
+#onscroll-top{
+		top: 0;
+/* 		background-color: #4255d6 !important; */
+		background-color: #283593 !important;
+		border-color: none";
+	}
+	
+	#onscroll-top .before-scroll-img {
+    display: block !important;
+}
+	
+	#onscroll-top .after-scroll-img {
+    display: none !important;
+}
+	
+	#onscroll-top .navbar-nav>li>a, #onscroll-top .navbar-nav>li>a:focus, #onscroll-top .navbar-nav>li>a:hover {
+    color: #fff;
+}
+	
+	#onscroll-top .navbar-toggle .icon-bar, .custom-scroll-css .navbar-toggle .icon-bar:focus, .custom-scroll-css .navbar-toggle .icon-bar:hover {
+    background-color: #fff !important;
+}
